@@ -1,0 +1,28 @@
+{
+    "context": "client",
+    "identifier": "com.pa.sootn.stuffoverview",
+    "display_name": "Sootn's Stuff Overview",
+    "description": "An overview of all your units and structures in a list.",
+    "author": "sootn",
+    "version": "0.1.0",
+    "build": "68331",
+    "date": "2014/07/15",
+    "signature": "not yet implemented",
+    "forum": "",
+    "category": [
+        "in-game",
+        "ui"
+    ],
+    "id": "stuffoverview",
+    "priority": 100,
+    "live_game": [
+        "coui://ui/mods/stuffoverview/lib.js",
+        "coui://ui/mods/stuffoverview/template.html",
+        "coui://ui/mods/stuffoverview/style.css",
+        "coui://ui/mods/stuffoverview/script.js"
+    ],
+    "dependencies": [
+        "com.pa.raevn.rfloatframe"
+    ],
+    "enabled": true
+}
