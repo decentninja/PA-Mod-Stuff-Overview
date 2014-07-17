@@ -22,7 +22,8 @@
         "coui://ui/mods/stuffoverview/script.js"
     ],
     "dependencies": [
-        "com.pa.raevn.rfloatframe"
+        "com.pa.raevn.rfloatframe",
+        "com.pa.raevn.rblueprintinfoframework"
     ],
     "enabled": true
 }
