@@ -5,37 +5,33 @@ function StuffOverview() {
 		left: -240
 	})
 	this.html = document.querySelector("#" + documentid)
-
 	this.setupWatchlist()
 }
 
 StuffOverview.prototype.setupWatchlist = function() {
-	console.log("- Stuffoverview setting up watchlist")
-	lib.addHandler("watch_list", this.handleEvent)
-	
-	var alertTypes = [
-		'watchlist.setCreationAlertTypes',
-		'watchlist.setDeathAlertTypes',
-		//'watchlist.setSightAlertTypes',
-		'watchlist.setTargetDestroyedAlertTypes'
-		//'watchlist.setDamageAlertTypes'
-	]
-	var include = ['Mobile', 'Structure', 'Recon']
-	var exclude = []
-	// Need to load after live_game and other mods that set watchlist stuff
-	window.setTimeout(function() {
-		alertTypes.forEach(function(type) {
-			engine.call(
-				type,
-				JSON.stringify(include),
-				JSON.stringify(exclude)
-			)
-		})
-	}, 2000)
+	var that = this
+	console.log("running")
+	alertsManager.addListener(function(payload) {
+		console.log("---- something happend")
+		that.handleEvent(payload)
+	})
 }
 
 StuffOverview.prototype.handleEvent = function(payload) {
-	console.log("blub", payload)
+	payload.list.forEach(function(event) {
+		switch(event.watch_type) {
+			case 0:
+				console.log("add", event.id)
+				break
+			case 1:
+			case 2:
+				console.log("remove", event.id)
+				break
+			default:
+				console.err("WTF?")
+		}
+
+	}, this)
 }
 
 var stuffoverview = new StuffOverview()

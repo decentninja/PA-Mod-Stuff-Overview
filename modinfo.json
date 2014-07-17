@@ -14,9 +14,9 @@
         "ui"
     ],
     "id": "stuffoverview",
-    "priority": 100,
+    "priority": 101,
     "live_game": [
-        "coui://ui/mods/stuffoverview/lib.js",
+        "coui://ui/mods/stuffoverview/alertManager.js",
         "coui://ui/mods/stuffoverview/template.html",
         "coui://ui/mods/stuffoverview/style.css",
         "coui://ui/mods/stuffoverview/script.js"
