@@ -1,10 +1,4 @@
 function StuffOverview() {
-	var documentid = "stuff_overview"
-	createFloatingFrame(documentid, 240, 50, {
-		offset: "topRight",
-		left: -240
-	})
-	this.html = document.querySelector("#" + documentid)
 	this.units = {}
 	this.setupWatchlist()
 }
@@ -18,6 +12,7 @@ StuffOverview.prototype.setupWatchlist = function() {
 }
 
 StuffOverview.prototype.handleEvent = function(payload) {
+	console.log(payload)
 	payload.list.forEach(function(event) {
 		var typename = event.spec_id.match(/\/(\w*)\.json$/)[1]
 		switch(event.watch_type) {
