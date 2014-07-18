@@ -1,5 +1,6 @@
 function StuffOverview() {
 	this.units = {}
+	this.gui = new Gui()
 	this.setupWatchlist()
 }
 
@@ -12,7 +13,6 @@ StuffOverview.prototype.setupWatchlist = function() {
 }
 
 StuffOverview.prototype.handleEvent = function(payload) {
-	console.log(payload)
 	payload.list.forEach(function(event) {
 		var typename = event.spec_id.match(/\/(\w*)\.json$/)[1]
 		switch(event.watch_type) {
@@ -40,6 +40,7 @@ StuffOverview.prototype.handleEvent = function(payload) {
 				console.err("WTF?", typename)
 		}
 		console.log("units: ", this.units)
+		this.gui.render(this.units)
 	}, this)
 }
 
