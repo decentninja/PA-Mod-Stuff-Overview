@@ -1,0 +1,2 @@
+cd ..
+zip stuffoverview/stuffoverview-v$(grep -o '[0-9]\.[0-9]\.[0-9]' stuffoverview/modinfo.json).zip -r stuffoverview/ui stuffoverview/modinfo.json

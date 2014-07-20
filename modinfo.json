@@ -1,12 +1,12 @@
 {
     "context": "client",
     "identifier": "com.pa.sootn.stuffoverview",
-    "display_name": "Sootn's Stuff Overview",
+    "display_name": "Stuff Overview",
     "description": "An overview of all your units and structures in a list.",
     "author": "sootn",
-    "version": "0.1.0",
-    "build": "68331",
-    "date": "2014/07/15",
+    "version": "1.0.0",
+    "build": "68767",
+    "date": "2014/07/20",
     "signature": "not yet implemented",
     "forum": "",
     "category": [
@@ -25,8 +25,6 @@
     },
     "id": "stuffoverview",
     "priority": 101,
-    "dependencies": [
-        "com.pa.raevn.rblueprintinfoframework"
-    ],
+    "dependencies": [],
     "enabled": true
 }
