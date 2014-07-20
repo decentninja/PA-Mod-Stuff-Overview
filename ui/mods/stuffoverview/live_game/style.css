@@ -1,0 +1,11 @@
+#stuffoverview {
+	width: 400px;
+}
+
+#stuffoverview > * {
+	display: inline-block;
+}
+
+#stuffoverview img {
+	width: 30px;
+}

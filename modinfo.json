@@ -13,15 +13,18 @@
         "in-game",
         "ui"
     ],
+    "scenes": {
+        "live_game_players": [
+            "coui://ui/mods/stuffoverview/live_game/lib.js",
+            "coui://ui/mods/stuffoverview/live_game/unitInfoParser.js",
+            "coui://ui/mods/stuffoverview/live_game/alertManager.js",
+            "coui://ui/mods/stuffoverview/live_game/model.js",
+            "coui://ui/mods/stuffoverview/live_game/view.js",
+            "coui://ui/mods/stuffoverview/live_game/controller.js"
+        ]
+    },
     "id": "stuffoverview",
     "priority": 101,
-    "live_game": [
-        "coui://ui/mods/stuffoverview/alertManager.js",
-        "coui://ui/mods/stuffoverview/unitInfoParser.js",
-        "coui://ui/mods/stuffoverview/gui.js",
-        "coui://ui/mods/stuffoverview/style.css",
-        "coui://ui/mods/stuffoverview/script.js"
-    ],
     "dependencies": [
         "com.pa.raevn.rblueprintinfoframework"
     ],
